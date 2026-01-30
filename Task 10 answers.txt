@@ -1,0 +1,10 @@
+1. Why EDA is important?
+Exploratory Data Analysis (EDA) is crucial because it helps us understand the dataset before modeling. For example, in Step 1–4 we checked .shape, .info(), .describe(), and plotted distributions to reveal missing values, outliers, and variable patterns. Without EDA, we risk building models on flawed or misunderstood data.
+2. Explain IQR outlier detection.
+The Interquartile Range (IQR) method detects outliers by measuring spread between Q1 (25th percentile) and Q3 (75th percentile). In Step 5, we flagged values lying below Q1 − 1.5×IQR or above Q3 + 1.5×IQR, which highlighted extreme grades or absences in the student dataset. This method is robust because it ignores the influence of extreme values when calculating thresholds.
+3. What is skewness?
+Skewness measures asymmetry in a distribution. For example, if most students scored average but a few scored extremely high, the grade distribution would be right‑skewed. Detecting skewness during Step 4 histograms helps decide whether transformations (like log or square root) are needed to normalize data for fair analysis.
+4. Correlation vs causation?
+Correlation shows statistical association, while causation means one variable directly affects another. In Step 8, we saw strong correlations between G1, G2, and G3 grades, but that doesn’t prove early grades cause final grades—they may simply move together due to underlying study habits. Mistaking correlation for causation can lead to wrong conclusions in analysis.
+5. Why not remove all outliers always?
+Outliers can sometimes represent genuine, important cases rather than errors. In Step 7, we discussed removing vs capping: removing might discard students with unusually high or low scores, losing valuable insights, while capping preserves them but reduces distortion. Therefore, handling outliers depends on context—blind removal risks losing meaningful patterns.
